@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --greenspark-green: #2AA876;
+  --greenspark-yellow: #F4D35E;
+}
+
+@theme {
+  --color-greenspark-green: #2AA876;
+  --color-greenspark-yellow: #F4D35E;
+  --font-family-noto-sans-jp: var(--font-noto-sans-jp), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans-jp), sans-serif;
+}
