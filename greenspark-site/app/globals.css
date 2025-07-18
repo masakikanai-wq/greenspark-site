@@ -1,16 +1,12 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --greenspark-green: #2AA876;
   --greenspark-yellow: #F4D35E;
-}
-
-@theme {
-  --color-greenspark-green: #2AA876;
-  --color-greenspark-yellow: #F4D35E;
-  --font-family-noto-sans-jp: var(--font-noto-sans-jp), sans-serif;
 }
 
 body {

@@ -11,11 +11,8 @@ export default async function Mission() {
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              {content?.title || 'ミッション'}
+              会社情報
             </h1>
-            <p className="text-sm sm:text-base mb-8 max-w-3xl mx-auto opacity-90 px-4">
-              私たちのビジョンと使命
-            </p>
           </div>
         </div>
       </div>
@@ -24,36 +21,33 @@ export default async function Mission() {
       <div className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {content?.content ? (
+            {false ? (
               <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: content.content }} />
             ) : (
               <div className="space-y-12">
                 {/* Mission Statement */}
-                <div className="text-center">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                    私たちのミッション
-                  </h2>
-                  <div className="w-16 h-px bg-greenspark-green mx-auto mb-8"></div>
-                  <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
-                    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
+                      ミッション
+                    </h2>
+                    <div className="w-full h-px bg-greenspark-green mx-auto mb-8"></div>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm max-w-4xl mx-auto">
+                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed text-center">
                       GreenSpark Solutionsは、<span className="text-greenspark-green font-semibold">中小製造業の皆様</span>が持続可能な経営を実現できるよう、
                       <span className="text-greenspark-green font-semibold">省エネ・環境コンサルティング</span>を通じて支援します。
                     </p>
-                    <div className="flex justify-center mt-8">
-                      <div className="w-12 h-12 bg-greenspark-green bg-opacity-10 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">🎯</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
                 {/* Vision Section */}
                 <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+                    <h3 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
                       ビジョン
                     </h3>
-                    <div className="w-16 h-px bg-greenspark-green mx-auto mb-8"></div>
+                    <div className="w-full h-px bg-greenspark-green mx-auto mb-8"></div>
                   </div>
                   <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm max-w-4xl mx-auto">
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed text-center">
@@ -62,20 +56,15 @@ export default async function Mission() {
                       <span className="text-greenspark-green font-semibold">経済的な効率性</span>を両立させ、<br className="hidden sm:block" />
                       次世代に引き継ぐことのできる<span className="text-greenspark-green font-semibold">持続可能な産業エコシステム</span>を構築します。
                     </p>
-                    <div className="flex justify-center mt-6">
-                      <div className="w-12 h-12 bg-greenspark-green bg-opacity-10 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">🌟</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
                 {/* Values Section */}
                 <div className="text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+                  <h3 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
                     価値観
                   </h3>
-                  <div className="w-16 h-px bg-greenspark-green mx-auto mb-12"></div>
+                  <div className="w-full h-px bg-greenspark-green mx-auto mb-12"></div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -115,9 +104,10 @@ export default async function Mission() {
 
                 {/* Commitment Section */}
                 <div className="bg-gradient-to-r from-greenspark-green to-greenspark-yellow rounded-2xl p-8 md:p-12 text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+                  <h3 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                     私たちのお約束
                   </h3>
+                  <div className="w-full h-px bg-white mx-auto mb-8"></div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
                     <div className="space-y-6">
                       <div className="flex items-start space-x-4">
@@ -175,31 +165,24 @@ export default async function Mission() {
                 </div>
 
                 {/* Social Impact Section */}
-                <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
-                      社会への貢献
-                    </h3>
-                    <div className="w-16 h-px bg-greenspark-green mx-auto mb-6"></div>
-                  </div>
-                  <div className="max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-r from-greenspark-green to-greenspark-yellow bg-opacity-10 rounded-xl p-6 md:p-8 mb-8">
-                      <p className="text-lg text-gray-700 leading-relaxed text-center">
-                        私たちは<span className="font-semibold text-greenspark-green">製造業の省エネ化</span>を通じて、
-                        <span className="font-semibold text-greenspark-green">日本の産業競争力向上</span>と
-                        <span className="font-semibold text-greenspark-green">環境保護</span>の両立を目指します。
+                <div className="bg-gradient-to-r from-greenspark-green to-greenspark-yellow rounded-2xl p-8 md:p-12 text-center">
+                  <h3 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                    社会への貢献
+                  </h3>
+                  <div className="w-full h-px bg-white mx-auto mb-8"></div>
+                  <div className="max-w-4xl mx-auto text-white">
+                    <div className="mb-8">
+                      <p className="text-lg leading-relaxed">
+                        私たちは<span className="font-semibold">製造業の省エネ化</span>を通じて、
+                        <span className="font-semibold">日本の産業競争力向上</span>と
+                        <span className="font-semibold">環境保護</span>の両立を目指します。
                       </p>
                     </div>
-                    <div className="text-center">
-                      <p className="text-base text-gray-600 leading-relaxed">
+                    <div>
+                      <p className="text-base opacity-90 leading-relaxed">
                         小さな一歩から始まる大きな変化を信じ、お客様とともに持続可能な未来を創造していきます。
                         一社一社の取り組みが、日本全体の環境改善と経済発展につながることを確信しています。
                       </p>
-                      <div className="flex justify-center mt-8">
-                        <div className="w-16 h-16 bg-greenspark-green bg-opacity-10 rounded-full flex items-center justify-center">
-                          <span className="text-3xl">🌍</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
