@@ -1,4 +1,5 @@
 import { getJsonContent } from '@/lib/markdown';
+import Link from 'next/link';
 
 interface TeamMember {
   name: string;
@@ -72,6 +73,51 @@ export default async function Team() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            <div>
+              <div className="text-xl md:text-2xl font-bold text-greenspark-green mb-4">
+                GreenSpark Solutions
+              </div>
+              <div className="text-gray-400 text-sm md:text-base">
+                〒100-0001<br />
+                東京都千代田区千代田1-1-1<br />
+                グリーンスパークビル 5F
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 w-full md:w-auto">
+              <div className="text-left w-full sm:w-32">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">サービス</h4>
+                <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <li><Link href="/service/audit" className="hover:text-greenspark-green">省エネ診断</Link></li>
+                  <li><Link href="/service/consulting" className="hover:text-greenspark-green">コンサルティング</Link></li>
+                  <li><Link href="/cases" className="hover:text-greenspark-green">導入事例</Link></li>
+                </ul>
+              </div>
+              <div className="text-left w-full sm:w-32">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">会社情報</h4>
+                <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <li><Link href="/company/about" className="hover:text-greenspark-green">会社概要</Link></li>
+                  <li><Link href="/company/team" className="hover:text-greenspark-green">チーム</Link></li>
+                </ul>
+              </div>
+              <div className="text-left w-full sm:w-40">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">お問い合わせ</h4>
+                <div className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <p>📞 03-1234-5678</p>
+                  <p>🕒 平日 9:00-18:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 GreenSpark Solutions Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -25,8 +25,8 @@ export default function Navigation() {
                 </button>
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-1">
-                    <Link href="/company/mission" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      ミッション
+                    <Link href="/company/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      会社概要
                     </Link>
                     <Link href="/company/team" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       チーム
@@ -94,11 +94,11 @@ export default function Navigation() {
             <div className="py-2">
               <div className="text-gray-800 font-medium text-sm px-3 py-2">会社案内</div>
               <Link
-                href="/company/mission"
+                href="/company/about"
                 className="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
-                ミッション
+                会社概要
               </Link>
               <Link
                 href="/company/team"

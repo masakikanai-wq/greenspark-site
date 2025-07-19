@@ -1,7 +1,8 @@
 import { getMarkdownContent } from '@/lib/markdown';
+import Link from 'next/link';
 
 export default async function Mission() {
-  const content = await getMarkdownContent('company', 'mission');
+  const content = await getMarkdownContent('company', 'about');
 
   return (
     <div className="min-h-screen">
@@ -25,12 +26,110 @@ export default async function Mission() {
               <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: content.content }} />
             ) : (
               <div className="space-y-12">
-                {/* Mission Statement */}
+                {/* Company Overview Section */}
                 <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12">
                   <div className="text-center mb-8">
                     <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
-                      ミッション
+                      会社概要
                     </h2>
+                    <div className="w-full h-px bg-greenspark-green mx-auto mb-8"></div>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm max-w-4xl mx-auto">
+                    <div className="overflow-x-auto">
+                      <table className="w-full border-collapse">
+                        <tbody>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 w-1/3 text-sm sm:text-base">
+                              会社名
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              GreenSpark Solutions株式会社
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              代表者
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              代表取締役社長　田中 環太郎
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              本社所在地
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              〒100-0001<br />
+                              東京都千代田区千代田1-1-1 グリーンビル8F
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              設立
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              2018年4月1日
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              資本金
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              1,000万円
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              従業員数
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              15名（2024年12月現在）
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              事業内容
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              ・省エネルギーコンサルティング業務<br />
+                              ・環境マネジメントシステム構築支援<br />
+                              ・エネルギー使用量診断・分析<br />
+                              ・持続可能経営戦略立案支援<br />
+                              ・省エネ設備導入コンサルティング
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200">
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              許認可・資格
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              ・省エネルギー診断機関認定<br />
+                              ・ISO14001審査員補資格<br />
+                              ・エネルギー管理士
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="py-4 px-4 font-semibold text-gray-800 bg-gray-50 text-sm sm:text-base">
+                              主要取引先
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 text-sm sm:text-base">
+                              中小製造業企業（機械加工、食品製造、化学工業等）<br />
+                              地方自治体、商工会議所
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mission Statement */}
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <h3 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
+                      ミッション
+                    </h3>
                     <div className="w-full h-px bg-greenspark-green mx-auto mb-8"></div>
                   </div>
                   <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm max-w-4xl mx-auto">
@@ -191,6 +290,51 @@ export default async function Mission() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            <div>
+              <div className="text-xl md:text-2xl font-bold text-greenspark-green mb-4">
+                GreenSpark Solutions
+              </div>
+              <div className="text-gray-400 text-sm md:text-base">
+                〒100-0001<br />
+                東京都千代田区千代田1-1-1<br />
+                グリーンスパークビル 5F
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 w-full md:w-auto">
+              <div className="text-left w-full sm:w-32">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">サービス</h4>
+                <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <li><Link href="/service/audit" className="hover:text-greenspark-green">省エネ診断</Link></li>
+                  <li><Link href="/service/consulting" className="hover:text-greenspark-green">コンサルティング</Link></li>
+                  <li><Link href="/cases" className="hover:text-greenspark-green">導入事例</Link></li>
+                </ul>
+              </div>
+              <div className="text-left w-full sm:w-32">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">会社情報</h4>
+                <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <li><Link href="/company/about" className="hover:text-greenspark-green">会社概要</Link></li>
+                  <li><Link href="/company/team" className="hover:text-greenspark-green">チーム</Link></li>
+                </ul>
+              </div>
+              <div className="text-left w-full sm:w-40">
+                <h4 className="font-semibold mb-4 text-sm md:text-base">お問い合わせ</h4>
+                <div className="space-y-2 text-gray-400 text-sm md:text-base">
+                  <p>📞 03-1234-5678</p>
+                  <p>🕒 平日 9:00-18:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 GreenSpark Solutions Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
