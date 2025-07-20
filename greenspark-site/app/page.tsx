@@ -19,7 +19,7 @@ export default function Home() {
     }, 15000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   return (
     <div className="min-h-screen">

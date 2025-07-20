@@ -1,8 +1,10 @@
-import { getAllMarkdownContent } from '@/lib/markdown';
-import Link from 'next/link';
+'use client';
 
-export default async function Cases() {
-  const cases = await getAllMarkdownContent('cases');
+import Link from 'next/link';
+import { useState } from 'react';
+
+export default function Cases() {
+  const [selectedFilter, setSelectedFilter] = useState('すべて');
 
   const defaultCases = [
     {
@@ -55,7 +57,11 @@ export default async function Cases() {
     }
   ];
 
-  const displayCases = defaultCases;
+  const filteredCases = selectedFilter === 'すべて' 
+    ? defaultCases 
+    : defaultCases.filter(caseItem => caseItem.tags.includes(selectedFilter));
+
+  const displayCases = filteredCases;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -72,24 +78,19 @@ export default async function Cases() {
           
           <div className="mb-8">
             <div className="flex flex-wrap gap-2 justify-center">
-              <button className="px-4 py-2 bg-greenspark-green text-white rounded-lg text-sm font-medium">
-                すべて
-              </button>
-              <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-300">
-                製造
-              </button>
-              <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-300">
-                省エネ
-              </button>
-              <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-300">
-                設備更新
-              </button>
-              <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-300">
-                IoT
-              </button>
-              <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-300">
-                エネルギー管理
-              </button>
+              {['すべて', '製造', '省エネ', '設備更新', 'IoT', 'エネルギー管理', '再生エネルギー'].map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setSelectedFilter(filter)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    selectedFilter === filter
+                      ? 'bg-greenspark-green text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
             </div>
           </div>
           

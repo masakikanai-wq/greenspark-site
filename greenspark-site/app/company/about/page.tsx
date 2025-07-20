@@ -23,7 +23,7 @@ export default async function Mission() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {false ? (
-              <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: content.content }} />
+              <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: content?.content || '' }} />
             ) : (
               <div className="space-y-12">
                 {/* Company Overview Section */}
