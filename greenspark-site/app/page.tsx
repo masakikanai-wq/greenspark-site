@@ -1,16 +1,48 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const heroImages = [
+    '/images/hero/factory-1.jpg',
+    '/images/hero/factory-2.jpg', 
+    '/images/hero/factory-3.jpg',
+    '/images/hero/factory-4.jpg'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-greenspark-green via-greenspark-green to-greenspark-yellow overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative overflow-hidden min-h-screen flex items-center">
+        {/* Background Images */}
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[6000ms] ease-out ${
+              index === currentImage ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ backgroundImage: `url(${image})` }}
+          />
+        ))}
+        
+        {/* Dark Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               製造業の未来を<br />
-              <span className="text-greenspark-yellow">グリーン</span>に変える
+              <span className="text-greenspark-green">グリーン</span>に変える
             </h1>
             <p className="text-sm sm:text-base mb-8 max-w-3xl mx-auto opacity-90 px-4">
               最新の省エネ技術とAI分析で、
@@ -19,13 +51,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
               <Link
                 href="/contact"
-                className="bg-greenspark-yellow text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
+                className="bg-greenspark-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
               >
                 無料相談のお申し込み
               </Link>
               <Link
                 href="/cases"
-                className="bg-white text-greenspark-green px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg text-sm sm:text-base"
+                className="bg-white text-greenspark-green px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
               >
                 導入事例を見る
               </Link>
