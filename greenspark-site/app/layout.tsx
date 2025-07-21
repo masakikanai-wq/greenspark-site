@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${notoSansJP.variable} antialiased`}
       >
         <Navigation />
-        <main>
+        <main className="pt-16">
           {children}
         </main>
       </body>
