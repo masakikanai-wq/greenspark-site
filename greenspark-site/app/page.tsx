@@ -71,7 +71,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
                 20年の実績と最新技術で<br />
                 製造業の省エネ化を支援
               </h2>
@@ -126,7 +126,7 @@ export default function Home() {
       <div className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               包括的な省エネソリューション
             </h2>
             <div className="w-16 h-px bg-greenspark-green mx-auto mb-6"></div>
@@ -187,7 +187,7 @@ export default function Home() {
       <div className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               数字で見る成果
             </h2>
             <div className="w-16 h-px bg-greenspark-green mx-auto mb-6"></div>
@@ -233,7 +233,7 @@ export default function Home() {
       <div className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               選ばれる理由
             </h2>
             <div className="w-16 h-px bg-greenspark-green mx-auto mb-6"></div>
@@ -283,7 +283,7 @@ export default function Home() {
       <div className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               お客様の声
             </h2>
             <div className="w-16 h-px bg-greenspark-green mx-auto mb-6"></div>
@@ -388,7 +388,7 @@ export default function Home() {
       <div className="bg-gradient-to-r from-greenspark-green to-greenspark-yellow py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
               今すぐ省エネ効果を実感してください
             </h2>
             <p className="text-base text-white opacity-90 mb-8">
