@@ -27,13 +27,13 @@ export default function ScrollToTop() {
   };
 
   return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-greenspark-green text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-110"
-          aria-label="上に戻る"
-        >
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-8 right-8 z-50 bg-greenspark-green text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-500 transform hover:scale-110 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}
+      aria-label="上に戻る"
+    >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -48,8 +48,6 @@ export default function ScrollToTop() {
               d="M5 10l7-7m0 0l7 7m-7-7v18"
             />
           </svg>
-        </button>
-      )}
-    </>
+    </button>
   );
 }
