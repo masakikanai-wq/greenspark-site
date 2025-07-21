@@ -71,7 +71,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 20年の実績と最新技術で<br />
                 製造業の省エネ化を支援
               </h2>
